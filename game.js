@@ -1,5 +1,6 @@
 const mario = document.querySelector('.mario')
 const pipe = document.querySelector('.pipe')
+const coin = document.querySelector('.coin')
 
 const jump = () => {
     mario.classList.add('jump');
@@ -10,8 +11,6 @@ const jump = () => {
 }
 
 const loop = setInterval(() => {
-
-    console.log('loop')
 
     const pipePosition = pipe.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '')    
@@ -32,6 +31,15 @@ const loop = setInterval(() => {
         clearInterval(loop);
     }
 
+    const coinPosition = coin.offsetLeft
+    const score = document.getElementById('score')
+
+    console.log('coinPosition')
+
+    if (coinPosition <= 120) {
+        console.log('coletou')
+    } 
+ 
 }, 10)
 
 document.addEventListener('keydown', jump);

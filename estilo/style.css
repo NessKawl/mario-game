@@ -34,8 +34,24 @@
     position: absolute;
     width: 500px;
     animation: clouds-animation 20s infinite linear;
+    padding: 20px;
 }
  
+.coin {
+    position: absolute;
+    width: 50px;
+    bottom: 35%;
+    animation: coin-animation 3s infinite linear;
+}
+
+#score {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-right: 30px;
+    text-align: end;
+}
+
 @keyframes pipe-animation{
     from {
         right: -80px;
@@ -75,5 +91,15 @@
     
     to {
         right: 100%;
+    }
+}
+
+@keyframes coin-animation {
+    from {
+        right:-50px;
+    }
+
+    to {
+        right: 92%;
     }
 }
