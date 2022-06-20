@@ -14,6 +14,8 @@ const loop = setInterval(() => {
 
     const pipePosition = pipe.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '')    
+    const coinPosition = coin.offsetLeft
+    const points = document.getElementById('points')
     
     if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 110) {
         pipe.style.animation = 'none'
@@ -28,18 +30,19 @@ const loop = setInterval(() => {
         mario.style.width = '80px'
         mario.style.marginLeft = '45px'
 
+        coin.style.left = `${coinPosition}px`
+
         clearInterval(loop);
     }
 
-    const coinPosition = coin.offsetLeft
-    const score = document.getElementById('score')
-    score = 0;
-    console.log('coinPosition')
-
     if (coinPosition <= 120) {
+        var score = 0;
         score++
-    } 
-  
+        points.innerText = `Score: ${score}`
+    }
 }, 10)
+
+
+
 
 document.addEventListener('keydown', jump);

@@ -44,7 +44,7 @@
     animation: coin-animation 3s infinite linear;
 }
 
-#score {
+#points {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     padding-top: 5px;
