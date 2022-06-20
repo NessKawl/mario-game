@@ -33,13 +33,13 @@ const loop = setInterval(() => {
 
     const coinPosition = coin.offsetLeft
     const score = document.getElementById('score')
-
+    score = 0;
     console.log('coinPosition')
 
     if (coinPosition <= 120) {
-        console.log('coletou')
+        score++
     } 
- 
+  
 }, 10)
 
 document.addEventListener('keydown', jump);
