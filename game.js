@@ -32,19 +32,15 @@ const loop = setInterval(() => {
         coin.style.left = `${coinPosition}px`
 
         clearInterval(loop);
-    }
+    }   
 
-    if (coinPosition <= 120) {
-        var score = 0;
-        score++
-        points.innerText = `Score: ${score}`
-        console.log('coletou')
+     if (coinPosition <= 120) {
+         var score = 0;
+        ++score
+         points.innerText = `Score: ${score}`
+         console.log('coletou')
     } 
-    
+
 }, 10)
 
-
-
-
 document.addEventListener('keydown', jump);
-document.addEventListener('tocuh', jump);
