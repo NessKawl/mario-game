@@ -18,10 +18,9 @@ const loop = setInterval(() => {
     const points = document.getElementById('points')
     
     if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 110) {
+        
         pipe.style.animation = 'none'
         pipe.style.left = `${pipePosition}px`
-
-
 
         mario.style.animation = 'none'
         mario.style.bottom = `${marioPosition}px` 
@@ -39,10 +38,13 @@ const loop = setInterval(() => {
         var score = 0;
         score++
         points.innerText = `Score: ${score}`
-    }
+        console.log('coletou')
+    } 
+    
 }, 10)
 
 
 
 
 document.addEventListener('keydown', jump);
+document.addEventListener('tocuh', jump);
